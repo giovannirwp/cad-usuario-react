@@ -1,10 +1,15 @@
-import './App.css';
-import Header from './components/Header/Header';
+import { HashRouter } from "react-router-dom";
+import "./App.css";
+import Header from "./components/Header/Header";
+import Rotas from './Rotas';
 
 function App() {
   return (
     <div className="container">
-      <Header />
+      <HashRouter>
+        <Header />
+        <Rotas />
+      </HashRouter>
     </div>
   );
 }
