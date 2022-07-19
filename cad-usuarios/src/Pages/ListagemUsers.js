@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import Users from "../components/Users/Users";
-import './css/listagem.css';
+import "./css/listagem.css";
 
 export default class ListagemUsers extends Component {
   constructor(props) {
@@ -8,6 +8,26 @@ export default class ListagemUsers extends Component {
     this.state = {
       usuarios: [],
     };
+  }
+
+  removerUsuario(usuario) {
+    if (
+      window.confirm(
+        `Tem certeza que deseja remover ${usuario.nome} ${usuario.sobrenome}`
+      )
+    ) {
+      fetch(`http://localhost:3004/usuarios/${usuario.id}`, {
+        method: 'DELETE'
+      })
+      .then(response => {
+        console.log(response);
+        if (response.ok) {
+          let usuarioState = this.state.usuarios;
+          usuarioState = usuarioState.filter((x) => x.id !== usuario.id);
+          this.setState({ usuarios: usuarioState })
+        }
+      })
+    }
   }
 
   getFetAll() {
@@ -22,7 +42,7 @@ export default class ListagemUsers extends Component {
             nome: usuario.first_name,
             sobrenome: usuario.last_name,
             email: usuario.email,
-            imagem: usuario.avatar
+            imagem: usuario.avatar,
           };
         });
         // console.log(usersAll)
@@ -39,7 +59,11 @@ export default class ListagemUsers extends Component {
         <h1 className="title-listagem">Listagem usuarios</h1>
         <div className="card-listagem">
           {this.state.usuarios.map((usuario) => (
-            <Users key={usuario.id} usuario={usuario} />
+            <Users
+              key={usuario.id}
+              usuario={usuario}
+              removerUsuario={this.removerUsuario.bind(this, usuario)}
+            />
           ))}
         </div>
       </div>
