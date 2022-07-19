@@ -9,11 +9,12 @@ export default class Users extends Component {
     return (
       <div className='users'>
         <ul>
-          <li>{this.props.usuario.id}</li>
-          <li>{this.props.usuario.nome}</li>
-          <li>{this.props.usuario.sobrenome}</li>
-          <li>{this.props.usuario.email}</li>
+          <li><img src={this.props.usuario.imagem} alt='Avatar' /></li>
+          <li><strong>Nome: </strong> {this.props.usuario.nome}</li>
+          <li><strong>Sobre Nome: </strong>{this.props.usuario.sobrenome}</li>
+          <li><strong>Email: </strong>{this.props.usuario.email}</li>
         </ul>
+        <button>Remover</button>
       </div>
     )
   }

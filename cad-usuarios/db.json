@@ -20,6 +20,13 @@
       "avatar": "https://reqres.in/img/faces/4-image.jpg",
       "email": "eve.holt@reqres.in",
       "id": 3
+    },
+    {
+      "first_name": "José",
+      "last_name": "Ribeiro",
+      "avatar": "https://reqres.in/img/faces/6-image.jpg",
+      "email": "jose.holt@reqres.in",
+      "id": 4
     }
   ],
   "sobre": [
