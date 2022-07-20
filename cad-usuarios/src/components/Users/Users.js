@@ -14,7 +14,7 @@ export default class Users extends Component {
           <li><strong>Sobre Nome: </strong>{this.props.usuario.sobrenome}</li>
           <li><strong>Email: </strong>{this.props.usuario.email}</li>
         </ul>
-        <button onClick={this.props.removerUsuario}>Remove ter</button>
+        <button className='remover' onClick={this.props.removerUsuario}>X</button>
       </div>
     )
   }
