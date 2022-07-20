@@ -1,6 +1,7 @@
 import React from "react";
 import { Route, Switch } from 'react-router';
 import Cadastro from "./Cadastro/Cadastro";
+import CadastroUsers from "./Pages/CadastroUsers";
 import Home from "./Pages/Home";
 import ListagemUsers from "./Pages/ListagemUsers";
 
@@ -9,6 +10,7 @@ export default function Rotas() {
     <Switch>
       <Route exact path='/cadastro' component={Cadastro} />
       <Route exact path='/listagem-users' component={ListagemUsers} />
+      <Route exact path='/cadastro-users' component={CadastroUsers} />
       <Route exact path='/' component={Home} />
     </Switch>
   );
