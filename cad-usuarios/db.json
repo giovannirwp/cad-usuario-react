@@ -27,6 +27,41 @@
       "avatar": "https://reqres.in/img/faces/6-image.jpg",
       "email": "jose.holt@reqres.in",
       "id": 4
+    },
+    {
+      "nome": "Dida Da Silva",
+      "sobrenome": "Pera",
+      "email": "pedro@hotmail.com",
+      "imagem": "https://st.depositphotos.com/1010338/2099/i/600/depositphotos_20999947-stock-photo-tropical-island-with-palms.jpg",
+      "id": 5
+    },
+    {
+      "nome": "Giovanni",
+      "sobrenome": "Pinto",
+      "email": "giovanni_ge@hotmail.com",
+      "imagem": "https://st.depositphotos.com/1010338/2099/i/600/depositphotos_20999947-stock-photo-tropical-island-with-palms.jpg",
+      "id": 6
+    },
+    {
+      "nome": "Giovanni",
+      "sobrenome": "Pinto",
+      "email": "giovanni_ge@hotmail.com",
+      "imagem": "https://st.depositphotos.com/1010338/2099/i/600/depositphotos_20999947-stock-photo-tropical-island-with-palms.jpg",
+      "id": 7
+    },
+    {
+      "nome": "Gigi",
+      "sobrenome": "Pinto",
+      "email": "giovanni_ge@hotmail.com",
+      "imagem": "https://st.depositphotos.com/1010338/2099/i/600/depositphotos_20999947-stock-photo-tropical-island-with-palms.jpg",
+      "id": 8
+    },
+    {
+      "nome": "titi",
+      "sobrenome": "titi",
+      "email": "titi@hotmt,.c",
+      "imagem": "https://st.depositphotos.com/1010338/2099/i/600/depositphotos_20999947-stock-photo-tropical-island-with-palms.jpg",
+      "id": 9
     }
   ],
   "sobre": [

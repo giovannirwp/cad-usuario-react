@@ -10,7 +10,7 @@ export default function Rotas() {
     <Switch>
       <Route exact path='/cadastro' component={Cadastro} />
       <Route exact path='/listagem-users' component={ListagemUsers} />
-      <Route exact path='/cadastro-users' component={CadastroUsers} />
+      <Route exact path='/cadastro-users' component={Cadastro} />
       <Route exact path='/' component={Home} />
     </Switch>
   );
