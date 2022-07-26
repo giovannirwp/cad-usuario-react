@@ -39,6 +39,8 @@
   margin-bottom: 5px;
   border-radius: 50%;
   border: 2px solid #7eafc2;
+  width: 151px;
+  height: 150px;
 }
 .card-listagem .users ul li strong {
   color: #0a0a0a;

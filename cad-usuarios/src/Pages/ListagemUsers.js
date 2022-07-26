@@ -34,7 +34,6 @@ export default class ListagemUsers extends Component {
     fetch("http://localhost:3004/usuarios")
       .then((response) => response.json())
       .then((dados) => {
-        // console.log(dados)
 
         const usersAll = dados.map((usuario) => {
           return {
@@ -45,7 +44,6 @@ export default class ListagemUsers extends Component {
             imagem: usuario.avatar,
           };
         });
-        // console.log(usersAll)
         this.setState({ usuarios: usersAll });
       });
   }

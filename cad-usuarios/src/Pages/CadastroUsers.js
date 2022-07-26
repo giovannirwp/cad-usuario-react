@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./css/cadastro.css";
 
 const INITIAL_STATE = {
-  usuario: { nome: '', sobrenome: '', email: '', imagem: '' }
+  usuario: { first_name: '', last_name: '', email: '', avatar: '' }
 }
 
 export default class CadastroUsers extends Component {
@@ -17,7 +17,6 @@ export default class CadastroUsers extends Component {
 
   onchangerHander(event) {
     const { name, value } = event.target;
-
     this.setState({
       usuario: { ...this.state.usuario, [name]: value },
     });
@@ -33,12 +32,12 @@ export default class CadastroUsers extends Component {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(usuario),
     })
-      .then((resposta) => resposta.json())
-      .then((dados) => {
-        console.log(dados);
-        this.setState(INITIAL_STATE);
-        this.props.adicionarUsuario(dados);
-      });
+    .then((resposta) => resposta.json())
+    .then((dados) => {
+
+      this.setState(INITIAL_STATE);
+      this.props.adicionarUsuario(dados);
+    });
   }
 
   render() {
@@ -48,41 +47,45 @@ export default class CadastroUsers extends Component {
         <form onSubmit={this.onSubmitHander}>
           <div className="row">
             <div className="col">
-              <label>Nome</label>
+              <label htmlFor="first_name">Nome</label>
               <input
                 type="text"
-                name="nome"
-                value={this.state.usuario.nome}
+                id="first_name"
+                name="first_name"
+                value={this.state.usuario.first_name}
                 onChange={this.onchangerHander}
               />
             </div>
             <div className="col">
-              <label>Sobre Nome</label>
+              <label htmlFor="last_name">Sobre Nome</label>
               <input
                 type="text"
-                name="sobrenome"
-                value={this.state.usuario.sobrenome}
-                onChange={this.onchangerHander}
-              />
-            </div>
-          </div>
-          <div className="row">
-            <div className="col">
-              <label>Url do avatar</label>
-              <input
-                type="text"
-                name="imagem"
-                value={this.state.usuario.imagem}
+                id="last_name"
+                name="last_name"
+                value={this.state.usuario.last_name}
                 onChange={this.onchangerHander}
               />
             </div>
           </div>
           <div className="row">
             <div className="col">
-              <label>Email</label>
+              <label htmlFor="avatar">Avatar</label>
+              <input
+                type="text"
+                id="avatar"
+                name="avatar"
+                value={this.state.usuario.avatar}
+                onChange={this.onchangerHander}
+              />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col">
+              <label htmlFor="email">Email</label>
               <input
                 type="text"
                 name="email"
+                id="email"
                 value={this.state.usuario.email}
                 onChange={this.onchangerHander}
               />

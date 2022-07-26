@@ -1,7 +1,6 @@
 import React from "react";
 import { Route, Switch } from 'react-router';
 import Cadastro from "./Cadastro/Cadastro";
-import CadastroUsers from "./Pages/CadastroUsers";
 import Home from "./Pages/Home";
 import ListagemUsers from "./Pages/ListagemUsers";
 
